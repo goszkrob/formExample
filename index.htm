@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+	<script type="text/javascript" src="validation.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+
+<h1>Form</h1>
+<a href="index.html">Reset</a>
+	<form name="returnForm" onSubmit="return validateForm();">
+            
+        <div class="row">
+    		<div id="email">
+            	E-mail:<br>
+           		<input type="text" name="Email" placeholder="someone@website.dom" required>
+            </div>
+            <div id="Pswrd">
+            	<span>Password:</span><span class="Why1">Why do I need this?</span>
+            	<input type="password" name="password" required>
+            </div>
+    	</div>
+        <hr>
+    	<div class="row">
+    		
+          	<div class="row" id="nowrap">
+            	<div id="fNameDiv">
+            	First Name:<br>
+            	<input type="text" name="firstName" required>
+            	</div>
+                
+            	<div id="mNameDiv">
+            	M Int:<br>
+            	<input type="text" name="middleInitial" size="1">
+            	</div>
+          	</div>  
+            
+            <div id="lNameDiv">
+            Last Name:<br>
+            <input type="text" name="lastName" required>            
+            </div>
+    	</div>
+
+        <div class="row">
+    		<div id="addr1">
+            Address Line 1:<br>
+            <input type="text" name="address1" required>
+            </div>
+    	</div>
+        <div class="row">
+    		<div id="addr2">
+            Address Line 2: (optional)<br>
+            <input type="text" name="address2">
+            </div>
+    	</div>
+        <div class="row">
+    		<div id="cit">
+            City:<br>
+            <input type="text" name="city" required>
+            </div>
+            <div id="stat">
+            State:<br>
+        		<select name="state" size="1" required>
+                	  <option value="default" disabled selected>--</option>
+                      <option value="AK">AK</option>
+                      <option value="AL">AL</option>
+                      <option value="AR">AR</option>
+                      <option value="AZ">AZ</option>
+                      <option value="CA">CA</option>
+                      <option value="CO">CO</option>
+                      <option value="CT">CT</option>
+                      <option value="DC">DC</option>
+                      <option value="DE">DE</option>
+                      <option value="FL">FL</option>
+                      <option value="GA">GA</option>
+                      <option value="HI">HI</option>
+                      <option value="IA">IA</option>
+                      <option value="ID">ID</option>
+                      <option value="IL">IL</option>
+                      <option value="IN">IN</option>
+                      <option value="KS">KS</option>
+                      <option value="KY">KY</option>
+                      <option value="LA">LA</option>
+                      <option value="MA">MA</option>
+                      <option value="MD">MD</option>
+                      <option value="ME">ME</option>
+                      <option value="MI">MI</option>
+                      <option value="MN">MN</option>
+                      <option value="MO">MO</option>
+                      <option value="MS">MS</option>
+                      <option value="MT">MT</option>
+                      <option value="NC">NC</option>
+                      <option value="ND">ND</option>
+                      <option value="NE">NE</option>
+                      <option value="NH">NH</option>
+                      <option value="NJ">NJ</option>
+                      <option value="NM">NM</option>
+                      <option value="NV">NV</option>
+                      <option value="NY">NY</option>
+                      <option value="OH">OH</option>
+                      <option value="OK">OK</option>
+                      <option value="OR">OR</option>
+                      <option value="PA">PA</option>
+                      <option value="RI">RI</option>
+                      <option value="SC">SC</option>
+                      <option value="SD">SD</option>
+                      <option value="TN">TN</option>
+                      <option value="TX">TX</option>
+                      <option value="UT">UT</option>
+                      <option value="VA">VA</option>
+                      <option value="VT">VT</option>
+                      <option value="WA">WA</option>
+                      <option value="WI">WI</option>
+                      <option value="WV">WV</option>
+                      <option value="WY">WY</option>
+                    </select>       
+        	</div>
+    	</div>
+        <div class="row">  
+            <div id="zip">
+            Zip Code:<br>
+            <input type="text" name="zipCode" required>
+            </div>
+    	</div>
+        
+		<hr>
+        <div class="row">
+        	<div id="prodType">
+            Product Type:<br>
+        		<input class="noStretch" type="radio" name="productType" value="book"/>Book
+                <input class="noStretch" type="radio" name="productType" value="cd"/>CD
+                <input class="noStretch" type="radio" name="productType" value="dvd"/>DVD
+                <input class="noStretch" type="radio" name="productType" value="download"/>Download         
+        	</div>
+            <div id="rtrnReason">
+            Reason for Return:<br>
+        		<select name="returnReason">
+            		<option value="default" disabled selected>Please Select Reason</option>
+                    <option value="broken">Broken</option>
+                    <option value="misorder">Misorder</option>
+                    <option value="dvd">Technical Error</option>
+                    <option value="other">Other</option>
+                 </select>        
+        	</div>
+        </div>
+        
+        <div class="row">
+        	<div id="rtrnComm">
+            If 'Other' Please Explain.<br>
+        	<textarea rows="4" cols="50" name="reasonComment"></textarea>
+        
+        	</div>
+        </div>
+        <hr>
+        <div class="row">
+        	<div class="terms">
+            	<span id="termsHead">Agree to Terms</span>
+               	<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. 
+        		<div class="row">
+                	<div id="agree">
+                    	<input class="noStretch" type="checkbox" name="Iagree" value="valid" required>I agree<br>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LfgmQ0UAAAAANVDPhcgWHbkKSPLo8wm9wA9gF8h"></div>
+				</div>
+        	</div>
+        </div>
+        
+        <div class="row">
+        <input type="submit" value="Submit">
+        </div>
+	</form>
+
+</body>    
+</html>
